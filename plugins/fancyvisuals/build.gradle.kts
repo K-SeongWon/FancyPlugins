@@ -94,6 +94,8 @@ tasks {
     shadowJar {
         archiveClassifier.set("")
         archiveBaseName.set("FancyVisuals")
+        // FancyVisuals JAR를 만들기 전에 packets JAR부터 만들어라
+        dependsOn(":libraries:packets:shadowJar")
     }
 
     compileJava {

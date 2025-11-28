@@ -21,5 +21,6 @@ dependencies {
 tasks {
     test {
         useJUnitPlatform()
+        dependsOn(":libraries:packets:shadowJar")
     }
 }

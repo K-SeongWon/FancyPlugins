@@ -111,6 +111,8 @@ tasks {
         archiveClassifier.set("")
         archiveBaseName.set("FancyNpcs")
         dependsOn(":plugins:fancynpcs:fn-api:shadowJar")
+        // ⬇⬇ 문제의 packets 모듈 shadowJar 도 명시적으로 의존
+        dependsOn(":libraries:packets:shadowJar")
     }
 
     publishing {

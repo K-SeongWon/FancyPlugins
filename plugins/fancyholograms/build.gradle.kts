@@ -113,6 +113,8 @@ tasks {
         archiveClassifier.set("")
 
         dependsOn(":plugins:fancyholograms:fh-api:shadowJar")
+        // ⬇⬇ 문제의 packets 모듈 shadowJar 도 명시적으로 의존
+        dependsOn(":libraries:packets:shadowJar")
     }
 
     compileJava {

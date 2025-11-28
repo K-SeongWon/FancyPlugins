@@ -100,7 +100,10 @@ tasks {
         archiveClassifier.set("")
         archiveBaseName.set("FancyDialogs")
 
+        // fd-api 먼저 빌드
         dependsOn(":plugins:fancydialogs:fd-api:shadowJar")
+        // ⬇⬇ 문제의 packets 모듈 shadowJar 도 명시적으로 의존
+        dependsOn(":libraries:packets:shadowJar")
     }
 
     compileJava {

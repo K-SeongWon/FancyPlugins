@@ -44,6 +44,8 @@ tasks {
 
     shadowJar {
         archiveClassifier.set("")
+        // 이 플러그인의 shadowJar는, packets 모듈의 shadowJar가 먼저 끝난 뒤에 실행해라.
+        dependsOn(":libraries:packets:shadowJar")
     }
 
     compileJava {

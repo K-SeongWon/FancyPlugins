@@ -1,0 +1,364 @@
+# ========================================================================
+# 이 파일은 템플릿입니다. 여기를 수정해도 적용되지 않을 수 있습니다.
+# ========================================================================
+# 커스텀 언어를 생성하는 방법:
+#   1. 이 파일을 복사해서 예: "ko.yml" 같이 이름을 변경합니다.
+#   2. 아래 "language_name" 값을 예: "korean" 으로 설정하고, config.yml 안의 "language" 값도 동일하게 맞춰줍니다.
+#   3. 이 파일의 내용을 원하는 대로 수정합니다.
+#   4. "/fancynpcs reload" 명령어로 플러그인을 리로드합니다.
+# ========================================================================
+
+# 언어 이름. 이 값은 config.yml 파일의 "language" 설정에서 사용할 수 있습니다.
+language_name: korean
+
+# 메시지는 MiniMessage 포맷을 지원합니다: https://docs.advntr.dev/minimessage/format.html
+messages:
+  # 공통 (상태)
+  true: "{successColor}참"
+  enabled: "{successColor}활성화됨"
+  false: "{errorColor}거짓"
+  disabled: "{errorColor}비활성화됨"
+
+  # 공통 (장비 슬롯)
+  main_hand: "주 손"
+  off_hand: "보조 손"
+  head: "머리"
+  chest: "가슴"
+  legs: "다리"
+  feet: "발"
+
+  # 공통 (가용성)
+  unknown: "알 수 없음"
+  not_available: "N/A"
+
+  # 공통 (가시성)
+  always_visible: "항상 보임"
+  not_visible: "보이지 않음"
+
+  # 공통 (기본값)
+  default: "기본값 ({value})"
+
+  # 공통 (색상)
+  color_black: "<dark_gray>검정"
+  color_dark_blue: "<dark_blue>짙은 파랑"
+  color_dark_green: "<dark_green>짙은 초록"
+  color_dark_aqua: "<dark_aqua>짙은 청록"
+  color_dark_red: "<dark_red>짙은 빨강"
+  color_dark_purple: "<dark_purple>짙은 보라"
+  color_gold: "<gold>금색"
+  color_gray: "<gray>회색"
+  color_dark_gray: "<dark_gray>짙은 회색"
+  color_blue: "<blue>파랑"
+  color_green: "<green>초록"
+  color_aqua: "<aqua>청록"
+  color_red: "<red>빨강"
+  color_light_purple: "<light_purple>연보라"
+  color_yellow: "<yellow>노랑"
+  color_white: "<white>흰색"
+
+  # 공통 (기타)
+  interaction_on_cooldown: "<dark_gray>› {errorColor}지금은 쿨다운 상태입니다. {warningColor}{time}{errorColor} 남았습니다."
+  action_missing_permissions: "<dark_gray>› {errorColor}권한이 부족합니다. 이 동작을 수행할 수 없습니다."
+  player_npcs_cannot_modify_npc: "<dark_gray>› {errorColor}당신이 소유한 NPC만 수정할 수 있습니다."
+  player_npcs_cannot_move_npc: "<dark_gray>› {errorColor}NPC는 자신의 땅(플롯)으로만 순간이동시킬 수 있습니다."
+  player_npcs_create_failure_limit_reached: "<dark_gray>› {errorColor}생성 가능한 NPC의 최대 개수에 도달했습니다."
+  player_npcs_create_failure_not_owned_plot: "<dark_gray>› {errorColor}자신의 땅(플롯)에서만 NPC를 생성할 수 있습니다."
+
+  # 명령어 (공통 응답)
+  command_missing_permissions: "<dark_gray>› {errorColor}권한이 부족합니다. 이 명령어를 사용할 수 없습니다."
+  command_wrong_usage: "<dark_gray>› {errorColor}이 하위 명령어는 존재하지 않습니다. 사용 가능한 명령어는 {warningColor}/npc help{errorColor} 로 확인하세요."
+  command_incomplete_usage: "<dark_gray>› {errorColor}명령어가 불완전합니다. 올바른 문법은 {warningColor}/npc help{errorColor} 로 확인하세요."
+  command_player_only: "<dark_gray>› {errorColor}이 명령어는 게임 내 플레이어만 사용할 수 있습니다."
+  command_invalid_boolean: "<dark_gray>› {errorColor}인수 {warningColor}{input}{errorColor} 는 {warningColor}true{errorColor} 또는 {warningColor}false{errorColor} 여야 합니다."
+  command_invalid_number: "<dark_gray>› {errorColor}인수 {warningColor}{input}{errorColor} 는 올바른 숫자가 아닙니다."
+  command_invalid_location: "<dark_gray>› {errorColor}인수 {warningColor}{input}{errorColor} 는 올바른 좌표가 아닙니다."
+  command_invalid_world: "<dark_gray>› {errorColor}{warningColor}{input}{errorColor} 라는 이름의 월드는 존재하지 않거나 로드되지 않았습니다."
+  command_invalid_glowing_color: "<dark_gray>› {errorColor}{warningColor}{input}{errorColor} 값은 올바른 발광 색상이 아닙니다."
+  command_invalid_list_sort_type: "<dark_gray>› {errorColor}{warningColor}{input}{errorColor} 값은 올바른 정렬 타입이 아닙니다."
+  command_invalid_nearby_sort_type: "<dark_gray>› {errorColor}{warningColor}{input}{errorColor} 값은 올바른 정렬 타입이 아닙니다."
+  command_invalid_entity_type: "<dark_gray>› {errorColor}{warningColor}{input}{errorColor} 값은 올바른 엔티티 타입이 아닙니다."
+  command_invalid_action_trigger: "<dark_gray>› {errorColor}{warningColor}{input}{errorColor} 값은 올바른 액션 트리거가 아닙니다."
+  command_invalid_action_type: "<dark_gray>› {errorColor}{warningColor}{input}{errorColor} 값은 올바른 액션 타입이 아닙니다."
+  command_invalid_npc: "<dark_gray>› {errorColor}NPC {warningColor}{input}{errorColor} 는 존재하지 않습니다."
+  command_invalid_material: "<dark_gray>› {errorColor}인수 {warningColor}{input}{errorColor} 는 올바른 재질(Material)이 아닙니다."
+  command_invalid_attribute: "<dark_gray>› {errorColor}값 {warningColor}{input}{errorColor} 는 올바른 속성(Attribute)이 아닙니다."
+  command_invalid_attribute_value: "<dark_gray>› {errorColor}값 {warningColor}{input}{errorColor} 는 이 속성에 사용할 수 없는 값입니다."
+  command_invalid_equipment_slot: "<dark_gray>› {errorColor}인수 {warningColor}{input}{errorColor} 는 올바른 슬롯이 아닙니다."
+  command_invalid_interval: "<dark_gray>› {errorColor}인수 {warningColor}{input}{errorColor} 는 올바른 시간(Duration) 값이 아닙니다."
+  command_invalid_enum_generic: "<dark_gray>› {errorColor}인수 {warningColor}{input}{errorColor} 는 올바른 {enum} 값이 아닙니다."
+  command_unsupported_npc_type: "<dark_gray>› {errorColor}이 NPC 타입에서는 해당 기능을 사용할 수 없습니다."
+  command_input_contains_blocked_command: "<dark_gray>› {errorColor}이 명령어는 상호작용에 사용할 수 없습니다."
+  command_npc_modification_cancelled: "<dark_gray>› {errorColor}NPC 수정이 API에 의해 취소되었습니다."
+
+  # 일반 문법 메시지 (문법은 Cloud에서 제공하며 사람이 읽기 불편할 수 있습니다)
+  command_invalid_syntax_generic: "<dark_gray>› <gray>문법: {warningColor}/{syntax}"
+
+  # 명령어 문법
+  command_syntax:
+    fancynpcs: "<dark_gray>› <gray>문법: {primaryColor}/fancynpcs {secondaryColor}(version | reload | save | feature_flags)"
+    npc: "<dark_gray>› {errorColor}알 수 없는 명령어입니다. 사용 가능한 명령어는 {warningColor}/npc help{errorColor} 로 확인하세요."
+    npc_action: "<dark_gray>› <gray>문법: {primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}(add | add_after | add_before | clear | list | move_down | move_up | remove | set)"
+    npc_action_add: "<dark_gray>› <gray>문법: {primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}add {secondaryColor}(type) [value]"
+    npc_action_add_after: "<dark_gray>› <gray>문법: {primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}add_after {secondaryColor}(index) (type) [value]"
+    npc_action_add_before: "<dark_gray>› <gray>문법: {primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}add_before {secondaryColor}(index) (type) [value]"
+    npc_action_remove: "<dark_gray>› <gray>문법: {primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}remove {secondaryColor}(number)"
+    npc_action_move_down: "<dark_gray>› <gray>문법: {primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}move_down {secondaryColor}(index)"
+    npc_action_move_up: "<dark_gray>› <gray>문법: {primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}move_down {secondaryColor}(index)"
+    npc_action_set: "<dark_gray>› <gray>문법: {primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}set {secondaryColor}(index) (type) [value]"
+    npc_attribute: "<dark_gray>› <gray>문법: {primaryColor}/npc attribute {secondaryColor}(npc) {primaryColor}(set | list)"
+    npc_attribute_set: "<dark_gray>› <gray>문법: {primaryColor}/npc attribute {secondaryColor}(npc) {primaryColor}set {secondaryColor}(attribute) (value)"
+    npc_center: "<dark_gray>› <gray>문법: {primaryColor}/npc center {secondaryColor}(npc)"
+    npc_collidable: "<dark_gray>› <gray>문법: {primaryColor}/npc collidable {secondaryColor}(npc) (state)"
+    npc_copy: "<dark_gray>› <gray>문법: {primaryColor}/npc copy {secondaryColor}(npc) (new_name)"
+    npc_create: "<dark_gray>› <gray>문법: {primaryColor}/npc create {secondaryColor}(npc) [--type] [--position] [--world]"
+    npc_displayname: "<dark_gray>› <gray>문법: {primaryColor}/npc displayname {secondaryColor}(npc) (name)"
+    npc_equipment: "<dark_gray>› <gray>문법: {primaryColor}/npc equipment {secondaryColor}(npc) {primaryColor}(set | clear | list)"
+    npc_equipment_set: "<dark_gray>› <gray>문법: {primaryColor}/npc equipment {secondaryColor}(npc) {primaryColor}set {secondaryColor}(slot) (@hand | @none | item)"
+    npc_glowing: "<dark_gray>› <gray>문법: {primaryColor}/npc glowing {secondaryColor}(npc) (disabled | color)"
+    npc_info: "<dark_gray>› <gray>문법: {primaryColor}/npc info {secondaryColor}(npc)"
+    npc_interaction_cooldown: "<dark_gray>› <gray>문법: {primaryColor}/npc interaction_cooldown {secondaryColor}(npc) (disabled | time)"
+    npc_scale: "<dark_gray>› <gray>문법: {primaryColor}/npc scale {secondaryColor}(npc) (factor)"
+    npc_list: "<dark_gray>› <gray>문법: {primaryColor}/npc list {secondaryColor}[filters...]"
+    npc_move_here: "<dark_gray>› <gray>문법: {primaryColor}/npc move_here {secondaryColor}(npc)"
+    npc_move_to: "<dark_gray>› <gray>문법: {primaryColor}/npc move_to {secondaryColor}(npc) (x) (y) (z) [world]"
+    npc_nearby: "<dark_gray>› <gray>문법: {primaryColor}/npc nearby {secondaryColor}[filters...]"
+    npc_remove: "<dark_gray>› <gray>문법: {primaryColor}/npc remove {secondaryColor}(npc)"
+    npc_rotate: "<dark_gray>› <gray>문법: {primaryColor}/npc rotate {secondaryColor}(npc) (yaw) (pitch)"
+    npc_show_in_tab: "<dark_gray>› <gray>문법: {primaryColor}/npc show_in_tab {secondaryColor}(npc) (state)"
+    npc_skin: "<dark_gray>› <gray>문법: {primaryColor}/npc skin {secondaryColor}(npc) (@none | @mirror | name | uuid | placeholder | url | file name) [--slim]"
+    npc_teleport: "<dark_gray>› <gray>문법: {primaryColor}/npc teleport {secondaryColor}(npc)"
+    npc_turn_to_player: "<dark_gray>› <gray>문법: {primaryColor}/npc turn_to_player {secondaryColor}(npc) (state)"
+    npc_turn_to_player_distance: "<dark_gray>› <gray>문법: {primaryColor}/npc turn_to_player_distance {secondaryColor}(npc) (state)"
+    npc_type: "<dark_gray>› <gray>문법: {primaryColor}/npc type {secondaryColor}(npc) (type)"
+    npc_visibility_distance: "<dark_gray>› <gray>문법: {primaryColor}/npc visibility_distance {secondaryColor}(npc) (always_visible | default | not_visible | distance)"
+
+  # 명령어 (fancynpcs)
+  fancynpcs_reload_success: "<dark_gray>› {successColor}플러그인이 리로드되었습니다."
+  fancynpcs_save_success: "<dark_gray>› {successColor}NPC가 저장되었습니다."
+  fancynpcs_feature_flags_header: "<dark_gray><st>-------------------</st>   <gray>기능 플래그  <dark_gray><st>------------------</st><newline>"
+  fancynpcs_feature_flags_entry: " <#848484>{number}. {warningColor}{name} <#848484>({id})<dark_gray>: {state}"
+  fancynpcs_feature_flags_footer: "<newline><dark_gray><st>-------------</st>  <gray>총 {warningColor}{total_formatted}<gray> 개의 항목을 표시 중입니다  <dark_gray><st>-------------</st>"
+  fancynpcs_test_success: "<dark_gray>› {successColor}총 {count}개의 테스트가 성공적으로 통과했습니다 (실행: {player}, 시간: {time})."
+  fancynpcs_test_failure: "<dark_gray>› {errorColor}일부 테스트가 실패했습니다 (실행: {player}, 시간: {time})."
+  fancynpcs_skin_system_restart_schedulers_success: "<dark_gray>› {successColor}스킨 스케줄러가 다시 시작되었습니다."
+  fancynpcs_skin_system_scheduler_status: "<dark_gray>› {successColor}상태 ({scheduler}): {status}"
+  fancynpcs_skin_system_clear_queues_success: "<dark_gray>› {successColor}스킨 생성 대기열이 초기화되었습니다."
+  fancynpcs_skin_system_clear_cache_success: "<dark_gray>› {successColor}스킨 캐시가 삭제되었습니다."
+  fancynpcs_skin_system_clear_uuid_cache_success: "<dark_gray>› {successColor}UUID 캐시가 삭제되었습니다."
+
+  # 명령어 (npc help)
+  npc_help_page_header: "<dark_gray><st>-------------</st>  {primaryColor}FancyNpcs<gray> 명령어 ({primaryColor}{page}<gray>/{primaryColor}{max_page}<gray>)  <dark_gray><st>--------------</st><newline>"
+  npc_help_page_footer: "<newline><dark_gray><st>-----------</st>  <gray>도움을 보려면 {primaryColor}<click:OPEN_URL:https://fancyinnovations.com/docs/fn-commands.html>여기</click><gray> 를 클릭하세요  <dark_gray><st>-----------</st>"
+  npc_help_contents:
+    - "<dark_gray>› <hover:show_text:'<gray>새로운 액션을 목록에 추가합니다.'>{primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}add {secondaryColor}(index) [value]"
+    - "<dark_gray>› <hover:show_text:'<gray>지정한 위치 뒤에 새로운 액션을 추가합니다.'>{primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}add_after {secondaryColor}(index) [value]"
+    - "<dark_gray>› <hover:show_text:'<gray>지정한 위치 앞에 새로운 액션을 추가합니다.'>{primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}add_before {secondaryColor}(index) [value]"
+    - "<dark_gray>› <hover:show_text:'<gray>해당 트리거의 모든 액션을 제거합니다.'>{primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}clear"
+    - "<dark_gray>› <hover:show_text:'<gray>해당 트리거의 모든 액션을 표시합니다.'>{primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}list"
+    - "<dark_gray>› <hover:show_text:'<gray>지정한 인덱스의 액션을 목록에서 아래로 이동합니다.'>{primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}move_down {secondaryColor}(index)"
+    - "<dark_gray>› <hover:show_text:'<gray>지정한 인덱스의 액션을 목록에서 위로 이동합니다.'>{primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}move_up {secondaryColor}(index)"
+    - "<dark_gray>› <hover:show_text:'<gray>목록에서 해당 액션을 제거합니다.'>{primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}remove {secondaryColor}(index)"
+    - "<dark_gray>› <hover:show_text:'<gray>지정한 위치의 액션을 새 값으로 설정합니다.'>{primaryColor}/npc action {secondaryColor}(npc) (trigger) {primaryColor}set {secondaryColor}(index) [value]"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 속성을 설정합니다.'>{primaryColor}/npc attribute {secondaryColor}(npc) {primaryColor}set {secondaryColor}(attribute) (value)"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC에 적용된 모든 속성을 표시합니다.'>{primaryColor}/npc attribute {secondaryColor}(npc) {primaryColor}list"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC가 다른 엔티티와 충돌할 수 있는지 여부를 변경합니다.'>{primaryColor}/npc collidable {secondaryColor}(npc) [state]"
+    - "<dark_gray>› <hover:show_text:'<gray>지정한 NPC를 복사(복제)합니다.'>{primaryColor}/npc copy {secondaryColor}(npc) (new_name)"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC를 현재 블록의 정중앙으로 맞춥니다.'>{primaryColor}/npc center {secondaryColor}(npc)"
+    - "<dark_gray>› <hover:show_text:'<gray>새 NPC를 생성합니다. 플래그로 세부 설정이 가능합니다.'>{primaryColor}/npc create {secondaryColor}(npc) [--type] [--location] [--world]"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 표시 이름을 변경합니다. MiniMessage, PlaceholderAPI, MiniPlaceholders를 지원합니다.'>{primaryColor}/npc displayname {secondaryColor}(npc) (name)"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 장비 슬롯을 손에 든 아이템, 없음 또는 특정 아이템 타입으로 설정합니다.'>{primaryColor}/npc equipment {secondaryColor}(npc) {primaryColor}set {secondaryColor}(slot) (@hand | @none | item)"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 모든 장비 슬롯을 초기화합니다.'>{primaryColor}/npc equipment {secondaryColor}(npc) {primaryColor}clear"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 장비 목록을 표시합니다.'>{primaryColor}/npc equipment {secondaryColor}(npc) {primaryColor}list"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 발광 상태 및 색상을 변경합니다.'>{primaryColor}/npc glowing {secondaryColor}(npc) (disabled | color)"
+    - "<dark_gray>› <hover:show_text:'<gray>지정한 NPC의 정보를 표시합니다.'>{primaryColor}/npc info {secondaryColor}(npc)"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC 상호작용 사이의 쿨다운 시간을 변경합니다.'>{primaryColor}/npc interaction_cooldown {secondaryColor}(npc) (disabled | time)"
+    - "<dark_gray>› <hover:show_text:'<gray>모든 월드의 NPC를 나열합니다. 필터와 정렬을 사용할 수 있습니다.'>{primaryColor}/npc list {secondaryColor}[--type] [--sort]"
+    - "<dark_gray>› <hover:show_text:'<gray>지정한 NPC를 자신의 위치로 순간이동시킵니다.'>{primaryColor}/npc move_here {secondaryColor}(npc)"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC를 지정한 좌표로 이동시킵니다.'>{primaryColor}/npc move_to {secondaryColor}(npc) (x) (y) (z) [world]"
+    - "<dark_gray>› <hover:show_text:'<gray>현재 월드의 NPC를 나열합니다. 반경, 타입, 정렬로 필터링할 수 있습니다.'>{primaryColor}/npc nearby {secondaryColor}[--radius] [--type] [--sort]"
+    - "<dark_gray>› <hover:show_text:'<gray>지정한 NPC를 제거(삭제)합니다.'>{primaryColor}/npc remove {secondaryColor}(npc)"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 회전값(yaw, pitch)을 변경합니다.'>{primaryColor}/npc rotate {secondaryColor}(npc) (yaw) (pitch)"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 크기 스케일을 변경합니다.'>{primaryColor}/npc scale {secondaryColor}(npc) (factor)"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC를 플레이어 목록(TAB)에 표시할지 여부를 변경합니다. PLAYER 타입의 NPC에서만 동작합니다.<newline><newline>{errorColor}변경 사항이 적용되려면 서버에 재접속해야 할 수 있습니다.'>{primaryColor}/npc show_in_tab {secondaryColor}(npc) (state)"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 스킨을 변경합니다.<newline><gray>PlaceholderAPI와 MiniPlaceholders를 지원합니다.<newline><newline>{warningColor}@none <dark_gray>- <gray>스킨 제거<newline>{warningColor}@mirror <dark_gray>- <gray>플레이어 스킨 미러링<newline>{warningColor}(name) <dark_gray>- <gray>플레이어 닉네임<newline>{warningColor}(url) <dark_gray>- <gray>스킨 텍스처 URL'>{primaryColor}/npc skin {secondaryColor}(npc) (@none | @mirror | name | url) [--slim]"
+    - "<dark_gray>› <hover:show_text:'<gray>지정한 NPC 위치로 자신을 순간이동합니다.'>{primaryColor}/npc teleport {secondaryColor}(npc)"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC가 플레이어를 바라보도록 할지 여부를 설정합니다.'>{primaryColor}/npc turn_to_player {secondaryColor}(npc) (state)"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC가 플레이어를 바라보는 거리(범위)를 변경합니다.'>{primaryColor}/npc turn_to_player_distance {secondaryColor}(npc) (distance)"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 엔티티 타입을 변경합니다.'>{primaryColor}/npc type {secondaryColor}(npc) (type)"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 가시 거리(시야 거리)를 변경합니다.'>{primaryColor}/npc visibility_distance {secondaryColor}(npc) (default | distance | ...)"
+
+  # 명령어 (npc action)
+  npc_action_add_success: "<dark_gray>› <gray>액션이 추가되었습니다. 총 {warningColor}{total}<gray> 개의 액션이 있습니다."
+  npc_action_add_before_success: "<dark_gray>› <gray>{warningColor}{number}<gray> 번 액션 앞에 새 액션이 추가되었습니다. 총 {warningColor}{total}<gray> 개의 액션이 있습니다."
+  npc_action_add_after_success: "<dark_gray>› <gray>{warningColor}{number}<gray> 번 액션 뒤에 새 액션이 추가되었습니다. 총 {warningColor}{total}<gray> 개의 액션이 있습니다."
+  npc_action_add_op_warning: "<dark_gray>› {warningColor}주의: <gray>“player_command_as_op” 액션은 명령어 실행 동안 플레이어에게 임시로 OP 권한을 부여합니다. 이는 보안상 위험할 수 있으므로, 신뢰할 수 있는 플레이어에게만 필요할 때 사용해야 합니다."
+  npc_action_set_success: "<dark_gray>› <gray>액션 트리거 {warningColor}{number}<gray> 이(가) 수정되었습니다. 총 {warningColor}{total}<gray> 개의 액션이 있습니다."
+  npc_action_set_failure: "<dark_gray>› {errorColor}액션 트리거 {warningColor}{number}{errorColor} 는 존재하지 않습니다."
+  npc_action_move_up_success: "<dark_gray>› <gray>액션 트리거 {warningColor}{number}<gray> 이(가) 위로 이동되었습니다."
+  npc_action_move_up_failure: "<dark_gray>› {errorColor}액션 트리거 {warningColor}{number}{errorColor} 는 이미 목록의 맨 위에 있습니다."
+  npc_action_move_down_success: "<dark_gray>› <gray>액션 트리거 {warningColor}{number}<gray> 이(가) 아래로 이동되었습니다."
+  npc_action_move_down_failure: "<dark_gray>› {errorColor}액션 트리거 {warningColor}{number}{errorColor} 는 이미 목록의 맨 아래에 있습니다."
+  npc_action_requires_value: "<dark_gray>› {errorColor}이 액션에는 값이 필요합니다."
+  npc_action_remove_success: "<dark_gray>› <gray>액션 트리거 {warningColor}{number}<gray> 이(가) 제거되었습니다. 총 {warningColor}{total}<gray> 개의 액션이 있습니다."
+  npc_action_remove_failure: "<dark_gray>› {errorColor}액션 트리거 {warningColor}{number}{errorColor} 는 존재하지 않습니다."
+  npc_action_clear_success: "<dark_gray>› <gray>액션이 모두 제거되었습니다."
+  npc_action_list_header: "<dark_gray><st>---------------------</st>  <gray>액션 목록  <dark_gray><st>---------------------</st><newline>"
+  npc_action_list_entry: " <#848484>{number}. {warningColor}{action}<dark_gray>: <gray>{value}"
+  npc_action_list_footer: "<newline><dark_gray><st>-------------</st>  <gray>총 {warningColor}{total}<gray> 개의 항목을 표시 중입니다  <dark_gray><st>-------------</st>"
+  npc_action_list_failure_empty: "<dark_gray>› {errorColor}등록된 액션이 없습니다. 첫 번째 액션을 추가하려면 {warningColor}/npc action (npc) (trigger) add (action){errorColor} 명령을 사용하세요."
+
+  # 명령어 (npc attribute)
+  npc_attribute_set: "<dark_gray>› <gray>속성 {warningColor}{attribute}<gray> 값이 {warningColor}{value}<gray> 로 설정되었습니다."
+  npc_attribute_set_invalid_for_this_entity_type: "<dark_gray>› {errorColor}속성 {warningColor}{input}{errorColor} 은(는) 이 엔티티 타입에서 사용할 수 없습니다."
+  npc_attribute_list_header: "<dark_gray><st>--------------------</st>  <gray>속성 목록  <dark_gray><st>--------------------</st><newline>"
+  npc_attribute_list_entry: " <dark_gray>› <#848484>{attribute}<dark_gray>: {warningColor}{value}"
+  npc_attribute_list_footer: "<newline><dark_gray><st>---------------------------------------------------</st>"
+  npc_attribute_list_failure_empty: "<dark_gray>› {errorColor}설정된 속성이 없습니다. 속성을 추가하려면 {warningColor}/npc attribute (npc) set (attribute) (value){errorColor} 명령을 사용하세요."
+
+  # 명령어 (npc collidable)
+  npc_collidable_set_true: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 는 이제 다른 엔티티와 충돌합니다."
+  npc_collidable_set_false: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 는 이제 더 이상 다른 엔티티와 충돌하지 않습니다."
+
+  # 명령어 (npc copy)
+  npc_copy_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 가 {warningColor}{new_npc}<gray> 로 복사되었습니다."
+
+  # 명령어 (npc create)
+  npc_create_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 가 생성되었습니다."
+  npc_create_failure_invalid_name: "<dark_gray>› {errorColor}이름에 허용되지 않는 문자가 포함되어 있습니다. 사용 가능 문자: [{warningColor}A-Z{errorColor}, {warningColor}a-z{errorColor}, {warningColor}0-9{errorColor}, {warningColor}_{errorColor}, {warningColor}-{errorColor}, {warningColor}/{errorColor}]"
+  npc_create_failure_already_exists: "<dark_gray>› {errorColor}NPC {warningColor}{npc}{errorColor} 는 이미 존재합니다."
+  npc_create_failure_must_specify_world: "<dark_gray>› {errorColor}콘솔에서 실행할 때는 {warningColor}--world{errorColor} 플래그를 반드시 지정해야 합니다."
+
+  # 명령어 (npc displayname)
+  npc_displayname_set_name: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 의 표시 이름이 <reset>{name}<reset><gray> 로 설정되었습니다."
+  npc_displayname_set_empty: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 는 더 이상 표시 이름을 사용하지 않습니다."
+
+  # 명령어 (npc equipment)
+  npc_equipment_set_item: "<dark_gray>› <gray>장비 슬롯 {warningColor}{slot}<gray> 이(가) <reset><item><gray> 로 설정되었습니다."
+  npc_equipment_set_empty: "<dark_gray>› <gray>장비 슬롯 {warningColor}{slot}<gray> 이(가) 비워졌습니다."
+  npc_equipment_set_failure_invalid_slot: "<dark_gray>› {errorColor}인수 {warningColor}{input}{errorColor} 는 올바른 장비 슬롯이 아닙니다."
+  npc_equipment_clear_success: "<dark_gray>› <gray>장비가 모두 제거되었습니다."
+  npc_equipment_list_header: "<dark_gray><st>--------------------</st>  <gray>장비 목록  <dark_gray><st>--------------------</st><newline>"
+  npc_equipment_list_entry: " <#848484>{slot}<dark_gray>: <reset><item>"
+  npc_equipment_list_footer: "<newline><dark_gray><st>---------------------------------------------------</st>"
+  npc_equipment_list_failure_empty: "<dark_gray>› {errorColor}설정된 장비가 없습니다. 장비를 설정하려면 {warningColor}/npc equipment (npc) set (slot) (@hand | @none | material){errorColor} 명령을 사용하세요."
+
+  # 명령어 (npc fix)
+  npc_fix_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 를 복구(수리) 시도했습니다... 문제가 계속된다면 저희에게 알려주세요."
+
+  # 명령어 (npc glowing)
+  npc_glowing_set_true: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 가 이제 발광합니다."
+  npc_glowing_set_false: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 는 더 이상 발광하지 않습니다."
+  npc_glowing_set_color_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 는 이제 {color}<gray> 색으로 발광합니다."
+  npc_glowing_set_color_failure_invalid_color: "<dark_gray>› {errorColor}값 {warningColor}{input}{errorColor} 는 올바른 색상이 아닙니다."
+
+  # 명령어 (npc info)
+  npc_info_general:
+    - ""
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 고유하고 영구적인 식별자입니다.'><#848484>Identifier</hover>: <hover:show_text:'<gray>클릭하면 UUID를 클립보드에 복사합니다.'><click:copy_to_clipboard:'{id}'>{warningColor}{id}</click></hover>"
+    - "<dark_gray>› <hover:show_text:'<gray>이 NPC를 생성한 플레이어의 식별자입니다.'><gray>Creator</hover>: <hover:show_text:'<gray>클릭하면 생성자의 UUID를 클립보드에 복사합니다.'><click:copy_to_clipboard:'{creator_uuid}'>{warningColor}{creator_uuid_short}<gray> ({creator_name})</click></hover>"
+    - "<dark_gray>› <hover:show_text:'<gray>명령어에 사용되며, 표시 이름이 설정되지 않은 경우 머리 위에 표시되는 NPC의 이름입니다.'><#848484>Name</hover>: {warningColor}{name}"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC 머리 위에 표시되는 이름입니다.'><gray>Display Name</hover>: <reset>{displayname}<reset>"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 엔티티 타입입니다.'><#848484>Type</hover><dark_gray>: {warningColor}{type}"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 현재 위치입니다.'><gray>Location</hover>: <hover:show_text:'<gray>클릭하면 좌표를 클립보드에 복사합니다.'><click:copy_to_clipboard:'{location_x} {location_y} {location_z}'>{warningColor}{location_x}<gray>, {warningColor}{location_y}<gray>, {warningColor}{location_z}<gray> in {warningColor}{world}</click></hover>"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 발광 상태입니다. {warningColor}색상<gray> 또는 {errorColor}disabled<gray> 일 수 있습니다.'><#848484>Glow</hover><dark_gray>: {glow}"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC가 플레이어를 바라볼지 여부입니다. {successColor}true<gray> 또는 {errorColor}false<gray> 가 될 수 있습니다.'><gray>Turns to Player</hover><dark_gray>: {is_turn_to_player}"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC가 플레이어 목록(TAB)에 표시될지 여부입니다. {successColor}true<gray> 또는 {errorColor}false<gray> 가 될 수 있습니다.'><#848484>Shown in TAB</hover>: {is_show_in_tab}"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 충돌 가능 여부입니다. {successColor}true<gray> 또는 {errorColor}false<gray> 가 될 수 있습니다.'><gray>Collidable</hover><dark_gray>: {is_collidable}"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC가 플레이어 스킨을 미러링할지 여부입니다. {successColor}true<gray> 또는 {errorColor}false<gray> 가 될 수 있습니다.'><#848484>Skin Mirroring</hover><dark_gray>: {warningColor}{is_skin_mirror}"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC 상호작용 사이의 쿨다운 시간입니다.'><gray>Interaction Cooldown</hover><dark_gray>: {warningColor}{interaction_cooldown}"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC 크기의 스케일 팩터입니다.'><#848484>Scale</hover><dark_gray>: {warningColor}x{scale}"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 가시 거리입니다.'><gray>Visibility Distance</hover><dark_gray>: {warningColor}{visibility_distance}"
+    - ""
+    - "<dark_gray>› <hover:show_text:'<gray>NPC의 장비 목록입니다.<newline>{warningColor}[Click Here]<gray> 를 클릭하면 장비를 확인할 수 있습니다.'><gray>Equipment</hover><dark_gray>: <click:RUN_COMMAND:'/npc equipment {name} list'>{warningColor}[Click Here]</click>"
+    - "<dark_gray>› <hover:show_text:'<gray>NPC에 적용된 속성 목록입니다.<newline>{warningColor}[Click Here]<gray> 를 클릭하면 속성을 확인할 수 있습니다.'><#848484>Attributes</hover><dark_gray>: <click:RUN_COMMAND:'/npc attribute {name} list'>{warningColor}[Click Here]</click>"
+    - ""
+    - "<dark_gray>› <hover:show_text:'<gray>{warningColor}/npc action (npc) (trigger)<gray> 그룹의 명령어로 액션을 관리할 수 있습니다.'><gray>이 NPC에는 총 {warningColor}{actions_total}<gray> 개의 액션이 연결되어 있습니다.</hover>"
+    - ""
+    - "<dark_gray>› {primaryColor}원하는 정보를 못 찾으셨나요?"
+    - "<dark_gray>› <gray>채팅 창을 열어 자세한 정보를 확인하세요."
+    - ""
+
+  # 명령어 (npc interaction_cooldown)
+  npc_interaction_cooldown_set: "<dark_gray>› <gray>상호작용 쿨다운이 {warningColor}{time}<gray> 로 설정되었습니다."
+  npc_interaction_cooldown_disabled: "<dark_gray>› <gray>상호작용 쿨다운이 비활성화되었습니다."
+
+  # 명령어 (npc list)
+  npc_list_header: "<dark_gray><st>------------------</st>  <gray>목록 조회 결과  <dark_gray><st>------------------</st><newline>"
+  npc_list_entry: " <#848484>{number}. <click:RUN_COMMAND:'/npc info {npc}'><hover:show_text:'<gray>클릭하면 자세한 정보를 확인합니다.'>{warningColor}{npc}</hover></click> <click:RUN_COMMAND:'/npc teleport {npc}'><hover:show_text:'<gray>클릭하면 해당 위치로 순간이동합니다.'><#848484>({location_x}, {location_y}, {location_z} in {world})"
+  npc_list_footer: "<newline><dark_gray><st>----------</st>  <gray>{warningColor}{count_formatted}<gray> 개를 표시 중 (총 {warningColor}{total_formatted}<gray> 개)  <dark_gray><st>----------</st>"
+  npc_list_failure_sort_requires_player: "<dark_gray>› {errorColor}이 정렬 타입은 콘솔에서 사용할 수 없습니다."
+  npc_list_failure_requires_world_flag: "<dark_gray>› {errorColor}콘솔에서 실행할 때는 {warningColor}--world{errorColor} 플래그를 반드시 지정해야 합니다."
+
+  # 명령어 (npc move_here)
+  npc_move_here_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 가 당신의 위치로 이동했습니다."
+
+  # 명령어 (npc move_to)
+  npc_move_to_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 가 {warningColor}{x}<gray>, {warningColor}{y}<gray>, {warningColor}{z}<gray> (월드: {warningColor}{world}<gray>) 로 이동했습니다."
+  npc_move_to_failure_must_specify_world: "<dark_gray>› {errorColor}콘솔에서 실행할 때는 월드를 반드시 지정해야 합니다."
+
+  # 명령어 (npc nearby)
+  npc_nearby_header: "<dark_gray><st>----------------</st>  <gray>인근 NPC 조회 결과  <dark_gray><st>-----------------</st><newline>"
+  npc_nearby_entry: " <#848484>{number}. <click:RUN_COMMAND:'/npc info {npc}'><hover:show_text:'<gray>클릭하면 자세한 정보를 확인합니다.'>{warningColor}{npc}</hover></click> <click:RUN_COMMAND:'/npc teleport {npc}'><hover:show_text:'<gray>클릭하면 해당 위치로 순간이동합니다.'><#848484>({distance} 블록 거리)</hover></click>"
+  npc_nearby_footer: "<newline><dark_gray><st>----------</st>  <gray>{warningColor}{count_formatted}<gray> 개를 표시 중 (총 {warningColor}{total_formatted}<gray> 개)  <dark_gray><st>----------</st>"
+
+  # 명령어 (npc remove)
+  npc_remove_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 가 제거되었습니다."
+
+  # 명령어 (npc rotate)
+  npc_rotate_set_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 가 yaw {warningColor}{yaw}<gray>, pitch {warningColor}{pitch}<gray> 로 회전되었습니다."
+
+  # 명령어 (scale)
+  npc_scale_set_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 의 크기 스케일이 {warningColor}{scale}<gray> 로 변경되었습니다."
+
+  # 명령어 (npc visibility_distance)
+  npc_visibility_distance_set_value: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 는 이제 {warningColor}{distance}<gray> 블록 거리에서 보입니다."
+  npc_visibility_distance_set_default: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 는 이제 기본 가시 거리 {warningColor}{distance}<gray> 를 사용합니다."
+  npc_visibility_distance_set_not_visible: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 는 이제 더 이상 보이지 않습니다."
+  npc_visibility_distance_set_always_visible: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 는 이제 항상 보입니다."
+
+  # 명령어 (npc show_in_tab)
+  npc_show_in_tab_set_true: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 가 이제 플레이어 목록(TAB)에 표시됩니다."
+  npc_show_in_tab_set_false: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 는 이제 플레이어 목록(TAB)에 표시되지 않습니다."
+
+  # 명령어 (npc skin)
+  npc_skin_set: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 가 {warningColor}{name}<gray> 스킨을 사용하도록 설정되었습니다."
+  npc_skin_set_mirror: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 가 이제 플레이어 스킨을 미러링합니다."
+  npc_skin_set_none: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 는 더 이상 스킨을 사용하지 않습니다."
+  npc_skin_set_later: "<hover:show_text:'{warningColor}30초 이상 로딩 중인가요?<newline><gray>콘솔의 오류를 확인하고 설정이 올바른지 확인한 후, 잠시 뒤 다시 시도하세요.'><dark_gray>› <gray>스킨이 몇 초 안에 적용될 예정입니다... <#848484>ℹ</hover>"
+  npc_skin_failure_invalid_url:
+    - "<click:open_url:'https://docs.fancyinnovations.com/fancynpcs/faq/#urls-as-skin'><hover:show_text:'{warningColor}이게 무슨 뜻인가요?<newline><gray>자세한 설명을 보려면 클릭하세요.'><dark_gray>› {errorColor}지정한 URL에서 스킨을 불러올 수 없습니다."
+    - "<dark_gray>› <gray>URL이 스킨 텍스처 파일을 직접 가리키는지 확인하세요. <#848484>ℹ</hover></click>"
+  npc_skin_failure_invalid_file:
+    - "<dark_gray>› {errorColor}지정한 파일에서 스킨을 불러올 수 없습니다."
+    - "<dark_gray>› <gray>해당 경로에 파일이 실제로 존재하는지 확인하세요."
+  npc_skin_failure_invalid_username:
+    - "<dark_gray>› {errorColor}지정한 사용자 이름에서 스킨을 불러올 수 없습니다."
+    - "<dark_gray>› <gray>해당 이름이 유효한 마인크래프트 계정인지 확인하세요."
+  npc_skin_failure_invalid_placeholder:
+    - "<click:open_url:'https://docs.fancyinnovations.com/fancynpcs/faq/#placeholders-as-skin'><hover:show_text:'{warningColor}이게 무슨 뜻인가요?<newline><gray>자세한 설명을 보려면 클릭하세요.'><dark_gray>› {errorColor}지정한 플레이스홀더에서 스킨을 불러올 수 없습니다."
+    - "<dark_gray>› <gray>해당 플레이스홀더가"
+    - "<dark_gray>›  <gray>플레이어 인스턴스 없이도 파싱 가능한지 확인하세요. <#848484>ℹ</hover>"
+
+  # 명령어 (npc teleport)
+  npc_teleport_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 위치로 순간이동했습니다."
+  npc_teleport_failure_exception: "<dark_gray>› {errorColor}NPC로 순간이동하는 중 오류가 발생했습니다. 콘솔의 오류 로그를 확인하세요."
+  npc_teleport_failure_world_not_loaded: "<dark_gray>› {errorColor}NPC로 순간이동하는 중 오류가 발생했습니다. 대상 월드가 로드되지 않았습니다."
+
+  # 명령어 (npc turn_to_player)
+  npc_turn_to_player_set_true: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 가 이제 플레이어를 바라봅니다."
+  npc_turn_to_player_set_false: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 는 이제 더 이상 플레이어를 바라보지 않습니다."
+  npc_turn_to_player_distance_set: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 는 이제 {warningColor}{distance}<gray> 블록 이내의 플레이어를 바라봅니다."
+  npc_turn_to_player_distance_default: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 는 이제 기본 거리 {warningColor}{distance}<gray> 블록을 사용합니다."
+  npc_turn_to_player_distance_invalid: "<dark_gray>› {errorColor}잘못된 거리 값입니다. 거리는 -1(기본값) 또는 양수여야 합니다."
+
+  # 명령어 (npc type)
+  npc_type_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 의 타입이 {warningColor}{type}<gray> 로 변경되었습니다."
+
+  # 명령어 (npc turn_to_player_distance)
+  turn_to_player_distance_current: "<dark_gray>› <gray>현재 바라보기 거리: {warningColor}{distance} 블록"
+  turn_to_player_distance_updated: "<dark_gray>› {successColor}바라보기 거리가 {warningColor}{distance} 블록으로 업데이트되었습니다"
+  turn_to_player_distance_failed: "<dark_gray>› {errorColor}바라보기 거리 값을 업데이트하지 못했습니다."
+
+  # 명령어 (npc center)
+  npc_center_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> 가 {warningColor}{x}<gray>, {warningColor}{y}<gray>, {warningColor}{z}<gray> 좌표의 중앙으로 정렬되었습니다."
+  npc_center_failure_no_location: "<dark_gray>› {errorColor}NPC {warningColor}{npc}{errorColor} 에는 유효한 위치 정보가 없습니다."

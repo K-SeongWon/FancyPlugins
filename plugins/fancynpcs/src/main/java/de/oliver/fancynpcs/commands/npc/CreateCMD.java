@@ -23,7 +23,12 @@ import java.util.regex.Pattern;
 public enum CreateCMD {
     INSTANCE; // SINGLETON
 
-    private static final Pattern NPC_NAME_PATTERN = Pattern.compile("^[A-Za-z0-9/_-]*$");
+    // 한글 이름 생성을 위한 수정
+    // private static final Pattern NPC_NAME_PATTERN = Pattern.compile("^[A-Za-z0-9/_-]*$");
+
+    // 한글 포함 전체 유니코드 문자 허용
+    private static final Pattern NPC_NAME_PATTERN = Pattern.compile("^[\\p{L}\\p{N}_/-]*$");
+
     private static final UUID EMPTY_UUID = new UUID(0, 0);
     private final Translator translator = FancyNpcs.getInstance().getTranslator();
 
